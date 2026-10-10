@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1a3e 100%);
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px rgba(255, 107, 53, 0.6);
+    color: #ff8c42;
+}
+
+.subtitle {
+    text-align: center;
+    color: #cccccc;
+    margin-bottom: 40px;
+    font-size: 1.1em;
+}
+
+/* Solar System */
+.solar-system {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto 50px;
+    background: radial-gradient(ellipse at center, rgba(255, 107, 53, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    box-shadow: inset 0 0 60px rgba(255, 107, 53, 0.1), 0 0 40px rgba(255, 107, 53, 0.2);
+}
+
+/* Sun */
+.sun {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, #ffd700, #ff8c00);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 60px rgba(255, 200, 0, 0.8), 0 0 100px rgba(255, 107, 53, 0.6);
+    z-index: 10;
+}
+
+/* Orbits */
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.orbit-1 {
+    width: 120px;
+    height: 120px;
+    animation: rotate 3.8s linear infinite;
+}
+
+.orbit-2 {
+    width: 160px;
+    height: 160px;
+    animation: rotate 6.2s linear infinite;
+}
+
+.orbit-3 {
+    width: 200px;
+    height: 200px;
+    animation: rotate 10s linear infinite;
+}
+
+.orbit-4 {
+    width: 240px;
+    height: 240px;
+    animation: rotate 18.8s linear infinite;
+}
+
+.orbit-5 {
+    width: 300px;
+    height: 300px;
+    animation: rotate 30s linear infinite;
+}
+
+.orbit-6 {
+    width: 360px;
+    height: 360px;
+    animation: rotate 45s linear infinite;
+}
+
+.orbit-7 {
+    width: 400px;
+    height: 400px;
+    animation: rotate 60s linear infinite;
+}
+
+.orbit-8 {
+    width: 450px;
+    height: 450px;
+    animation: rotate 80s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Planets */
+.planet {
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.4);
+}
+
+.mercury {
+    width: 8px;
+    height: 8px;
+    background: #8c7853;
+}
+
+.venus {
+    width: 14px;
+    height: 14px;
+    background: #ffc649;
+    box-shadow: 0 0 15px rgba(255, 198, 73, 0.6);
+}
+
+.earth {
+    width: 15px;
+    height: 15px;
+    background: linear-gradient(135deg, #4a90e2 0%, #2ecc71 50%, #4a90e2 100%);
+    box-shadow: 0 0 15px rgba(74, 144, 226, 0.6);
+}
+
+.mars {
+    width: 12px;
+    height: 12px;
+    background: #e27b58;
+    box-shadow: 0 0 12px rgba(226, 123, 88, 0.6);
+}
+
+.jupiter {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(90deg, #c88b3a 0%, #a67035 50%, #c88b3a 100%);
+    box-shadow: 0 0 25px rgba(200, 139, 58, 0.5);
+}
+
+.saturn {
+    width: 26px;
+    height: 26px;
+    background: linear-gradient(90deg, #f4d46f 0%, #e8c657 50%, #f4d46f 100%);
+    box-shadow: 0 0 20px rgba(244, 212, 111, 0.4);
+    position: relative;
+}
+
+.saturn .ring {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(210, 180, 140, 0.6);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateX(75deg);
+}
+
+.uranus {
+    width: 16px;
+    height: 16px;
+    background: #4fd0e7;
+    box-shadow: 0 0 15px rgba(79, 208, 231, 0.5);
+}
+
+.neptune {
+    width: 16px;
+    height: 16px;
+    background: #4a6fa5;
+    box-shadow: 0 0 15px rgba(74, 111, 165, 0.5);
+}
+
+/* Info Section */
+.info {
+    background: rgba(107, 35, 35, 0.3);
+    border: 2px solid #ff6b35;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.info h2 {
+    color: #ff8c42;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 107, 53, 0.4);
+}
+
+.info ul {
+    list-style: none;
+}
+
+.info li {
+    padding: 10px;
+    margin: 10px 0;
+    background: rgba(255, 107, 53, 0.1);
+    border-left: 4px solid #ff6b35;
+    border-radius: 4px;
+    line-height: 1.6;
+}
+
+.info strong {
+    color: #ffa500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .solar-system {
+        width: 400px;
+        height: 400px;
+    }
+
+    .sun {
+        width: 40px;
+        height: 40px;
+    }
+
+    .orbit-1 { width: 80px; height: 80px; }
+    .orbit-2 { width: 110px; height: 110px; }
+    .orbit-3 { width: 140px; height: 140px; }
+    .orbit-4 { width: 170px; height: 170px; }
+    .orbit-5 { width: 210px; height: 210px; }
+    .orbit-6 { width: 250px; height: 250px; }
+    .orbit-7 { width: 280px; height: 280px; }
+    .orbit-8 { width: 310px; height: 310px; }
+}

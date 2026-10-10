@@ -1,0 +1,112 @@
+{
+  "backdrop": {
+    "bg": "#2f1d45",
+    "text": "#c9b3e6",
+    "shadow": "#170d24"
+  },
+  "page": {
+    "bg": "#0d3346",
+    "border": "cyan",
+    "text": "default",
+    "muted": "gray",
+    "accent": "#22d3ee"
+  },
+  "logo": {
+    "gradient": ["#22d3ee", "#38bdf8", "#60a5fa", "#818cf8", "#a78bfa", "#c084fc"],
+    "title": "#a78bfa",
+    "author": "#c084fc"
+  },
+  "info": {
+    "border": "gray",
+    "session": "yellow",
+    "ok": "green"
+  },
+  "chat": {
+    "userLabel": "cyan",
+    "userText": "default",
+    "agentLabel": "green",
+    "agentText": "#fdf3b5",
+    "tool": "gray",
+    "toolError": "red",
+    "error": "red",
+    "info": "gray",
+    "badgeText": "black",
+    "resumedBadge": "yellow",
+    "resumedId": "yellow",
+    "projectBadge": "cyan",
+    "projectPath": "cyanBright"
+  },
+  "status": {
+    "badgeBg": "#22d3ee",
+    "badgeText": "black",
+    "busy": "yellow",
+    "ready": "green",
+    "text": "gray"
+  },
+  "input": {
+    "border": "cyan",
+    "borderBusy": "gray",
+    "prompt": "cyan"
+  },
+  "picker": {
+    "border": "cyan",
+    "selected": "cyan",
+    "current": "green",
+    "detail": "gray"
+  },
+  "approval": {
+    "border": "yellow",
+    "title": "yellow",
+    "command": "whiteBright",
+    "yes": "green",
+    "always": "cyan",
+    "no": "red"
+  },
+  "tree": {
+    "border": "cyan",
+    "titleBg": "cyan",
+    "titleText": "black",
+    "guides": "gray",
+    "dir": "blueBright",
+    "file": "default",
+    "changed": "yellow"
+  },
+  "navigator": {
+    "heading": "cyanBright",
+    "bg": "blue",
+    "border": "cyanBright",
+    "titleBg": "cyan",
+    "titleText": "black",
+    "columns": "yellowBright",
+    "dir": "whiteBright",
+    "file": "cyanBright",
+    "selectedBg": "cyan",
+    "selectedText": "black",
+    "marked": "yellowBright",
+    "info": "whiteBright",
+    "warning": "yellowBright"
+  },
+  "keys": {
+    "key": "whiteBright",
+    "labelBg": "cyan",
+    "labelText": "black"
+  },
+  "dialog": {
+    "bg": "#e8e2d0",
+    "text": "#1f2933",
+    "border": "#4b5b6b",
+    "title": "#2f6fc0",
+    "field": "#8fd6d0",
+    "focus": "#2f9fc0",
+    "error": "#b3261e",
+    "shadow": "#3a4a58"
+  },
+  "viewer": {
+    "bg": "blue",
+    "text": "white",
+    "headerBg": "cyan",
+    "headerText": "black",
+    "offset": "yellowBright",
+    "notice": "cyanBright"
+  }
+}

@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.bun-build
+*.log
+.DS_Store
+.vscode/
+.env
+.env.*
+!.env.example

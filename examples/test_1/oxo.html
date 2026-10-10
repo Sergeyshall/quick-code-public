@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OXO</title>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 40px;
+    background: #f5f5f5;
+  }
+  #board {
+    display: grid;
+    grid-template-columns: repeat(3, 90px);
+    grid-template-rows: repeat(3, 90px);
+    gap: 6px;
+  }
+  .cell {
+    background: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 44px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+  }
+  .cell:disabled { cursor: default; }
+  .cell:hover:not(:disabled) { background: #eaeaea; }
+  #status { font-size: 20px; min-height: 24px; }
+  #reset {
+    padding: 8px 18px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  <h1>OXO</h1>
+  <div id="status"></div>
+  <div id="board"></div>
+  <button id="reset">New game</button>
+
+<script>
+  const WINS = [
+    [0,1,2],[3,4,5],[6,7,8],
+    [0,3,6],[1,4,7],[2,5,8],
+    [0,4,8],[2,4,6]
+  ];
+
+  const boardEl = document.getElementById('board');
+  const statusEl = document.getElementById('status');
+  let cells, turn, over;
+
+  function start() {
+    cells = Array(9).fill('');
+    turn = 'X';
+    over = false;
+    boardEl.innerHTML = '';
+    cells.forEach((_, i) => {
+      const b = document.createElement('button');
+      b.className = 'cell';
+      b.addEventListener('click', () => play(i));
+      boardEl.appendChild(b);
+    });
+    render();
+  }
+
+  function play(i) {
+    if (over || cells[i]) return;
+    cells[i] = turn;
+    const win = WINS.find(l => l.every(k => cells[k] === turn));
+    if (win) {
+      over = true;
+      statusEl.textContent = turn + ' wins!';
+    } else if (cells.every(Boolean)) {
+      over = true;
+      statusEl.textContent = "It's a draw.";
+    } else {
+      turn = turn === 'X' ? 'O' : 'X';
+    }
+    render();
+  }
+
+  function render() {
+    [...boardEl.children].forEach((b, i) => {
+      b.textContent = cells[i];
+      b.disabled = over || !!cells[i];
+    });
+    if (!over) statusEl.textContent = 'Turn: ' + turn;
+  }
+
+  document.getElementById('reset').addEventListener('click', start);
+  start();
+</script>
+</body>
+</html>
