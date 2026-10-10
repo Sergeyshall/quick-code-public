@@ -9,6 +9,8 @@ Anthropic SDK.
 > classifier. Review and harden it before using it for anything beyond experiments.
 > Licensed under [MIT](LICENSE); provided as is, without warranty.
 
+![Main screen](docs/img/main-screen.png)
+
 ## Quick start
 
 Requires [Bun](https://bun.sh) and an Anthropic API key.
@@ -39,6 +41,8 @@ tree appears on the right when the terminal is at least 90 columns wide.
 | F7 | Create a folder |
 | Ins, F5, F6 | Mark, copy, paste (never overwrites) |
 | F8 | Delete after confirmation (no trash) |
+
+![Folder navigator](docs/img/folder-navigator.png)
 
 F-keys have Ctrl alternatives (see the key bar at the bottom of the navigator).
 
@@ -119,4 +123,5 @@ later commands, and file contents sent to the model can contain prompt injection
 | `src/ui/` | Ink components, theme, mouse and function-key handling |
 | `src/shims/` | No-op `react-devtools-core` so `bun build --compile` can bundle Ink |
 | `test/` | Unit tests (`bun test`) |
+| `docs/img/` | Screenshots used in this README |
 | `examples/` | Sample projects created with the agent |
